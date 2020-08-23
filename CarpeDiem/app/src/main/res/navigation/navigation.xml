@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kradic.carpediem.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kradic.carpediem.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="isAdmin"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_homeFragment_to_billingFragment"
+            app:destination="@id/billingFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_writeFragment"
+            app:destination="@id/writeFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_billsFragment"
+            app:destination="@id/billsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.kradic.carpediem.billing.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <argument
+            android:name="isAdmin"
+            app:argType="boolean" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_billingFragment_to_drinksFragment"
+            app:destination="@id/drinksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.kradic.carpediem.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/writeFragment"
+        android:name="com.kradic.carpediem.write.WriteFragment"
+        android:label="WriteFragment"
+        tools:layout="@layout/fragment_write">
+        <action
+            android:id="@+id/action_writeFragment_to_dailyIncomeFragment"
+            app:destination="@id/dailyIncomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinksFragment"
+        android:name="com.kradic.carpediem.drinks.DrinksFragment"
+        android:label="fragment_drinks"
+        tools:layout="@layout/fragment_drinks" >
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_drinksFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billsFragment"
+        android:name="com.kradic.carpediem.bills.BillsFragment"
+        android:label="BillsFragment"
+        tools:layout="@layout/fragment_bills"/>
+    <fragment
+        android:id="@+id/dailyIncomeFragment"
+        android:name="com.kradic.carpediem.dailyIncome.DailyIncomeFragment"
+        android:label="DailyIncomeFragment"
+        tools:layout="@layout/fragment_daily_income">
+        <action
+            android:id="@+id/action_dailyIncomeFragment_to_printIncomeFragment"
+            app:destination="@id/printIncomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.kradic.carpediem.articles.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" >
+        <action
+            android:id="@+id/action_articlesFragment_to_editArticleFragment"
+            app:destination="@id/editArticleFragment" />
+        <action
+            android:id="@+id/action_articlesFragment_to_addArticleFragment"
+            app:destination="@id/addArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editArticleFragment"
+        android:name="com.kradic.carpediem.editArticle.EditArticleFragment"
+        android:label="EditArticleFragment"
+        tools:layout="@layout/fragment_edit_article">
+        <argument
+            android:name="drinkId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/addArticleFragment"
+        android:name="com.kradic.carpediem.addArticle.AddArticleFragment"
+        android:label="AddArticleFragment"
+        tools:layout="@layout/fragment_add_article"/>
+    <fragment
+        android:id="@+id/printIncomeFragment"
+        android:name="com.kradic.carpediem.printIncome.PrintIncomeFragment"
+        android:label="PrintIncomeFragment"
+        tools:layout="@layout/fragment_print_income">
+        <argument
+            android:name="total"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_printIncomeFragment_to_dailyIncomeFragment"
+            app:destination="@id/dailyIncomeFragment"
+            app:popUpTo="@id/writeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="chosenDrink"
+            type="com.kradic.carpediem.drinks.ChosenDrink" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="Drink"
+            android:textColor="@android:color/white"
+            app:chosenDrinkString="@{chosenDrink}" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:paddingEnd="8dp"
+            android:textColor="@android:color/white"
+            android:text="0 kom"
+            app:noOfChosenDrink="@{chosenDrink}" />
+
+    </LinearLayout>
+</layout>
+

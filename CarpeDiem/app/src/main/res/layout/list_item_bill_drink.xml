@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="billDrink"
+            type="com.kradic.carpediem.drinks.ChosenDrink" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:paddingStart="8dp"
+            android:text="Coca cola"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:billDrinkName="@{billDrink}"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:text="0 kom"
+            android:paddingStart="8dp"
+            android:gravity="center"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:billDrinkNo="@{billDrink}"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="1000.00 kn"
+            android:layout_weight="1"
+            android:paddingEnd="8dp"
+            android:gravity="right"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:billDrinkPrice="@{billDrink}"
+            />
+
+    </LinearLayout>
+</layout>
+

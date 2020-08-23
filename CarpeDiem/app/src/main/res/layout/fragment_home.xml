@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="homeViewModel"
+            type="com.kradic.carpediem.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeFragment"
+        android:background="@android:color/black">
+
+        <!-- TODO: Update blank fragment layout -->
+        <Button
+            android:id="@+id/txtLoggedUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{homeViewModel.name}"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnTurnOffDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/ugasi_aplikaciju"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLoggedUser" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="128dp"
+            android:onClick="@{() -> homeViewModel.startNavigatingToBilling()}"
+            android:text="@string/start"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <Button
+            android:id="@+id/btnRacuni"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> homeViewModel.startNavigatingToBills()}"
+            android:text="@string/ra_uni"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+
+
+        <Button
+            android:id="@+id/btnPostavke"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> homeViewModel.startNavigatingToSettings()}"
+            android:text="@string/postavke"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRacuni" />
+
+        <Button
+            android:id="@+id/btnIspis"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> homeViewModel.startNavigatingToWrite()}"
+            android:text="Promet"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnPostavke" />
+
+        <Button
+            android:id="@+id/btnArtikli"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> homeViewModel.startNavigatingToArticles()}"
+            android:text="@string/artikli"
+            android:background="@drawable/rect_button"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnIspis" />
+
+        <ImageView
+            android:id="@+id/imgLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnPostavke"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRacuni"
+            app:srcCompat="@android:drawable/ic_lock_lock"
+            android:visibility="@{homeViewModel.adminStatus ? View.GONE : View.VISIBLE}"/>
+
+        <ImageView
+            android:id="@+id/imgStornoLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRacuni"
+            app:layout_constraintStart_toStartOf="@+id/btnRacuni"
+            app:srcCompat="@android:drawable/ic_lock_lock"
+            android:visibility="@{homeViewModel.adminStatus ? View.GONE : View.VISIBLE}"/>
+
+        <ImageView
+            android:id="@+id/imgPostavkeLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnPostavke"
+            app:layout_constraintStart_toStartOf="@+id/btnPostavke"
+            app:srcCompat="@android:drawable/ic_lock_lock"
+            android:visibility="@{homeViewModel.adminStatus ? View.GONE : View.VISIBLE}"/>
+
+        <ImageView
+            android:id="@+id/imgIspisLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnIspis"
+            app:layout_constraintStart_toStartOf="@+id/btnIspis"
+            app:srcCompat="@android:drawable/ic_lock_lock"
+            android:visibility="@{homeViewModel.adminStatus ? View.GONE : View.VISIBLE}"/>
+
+        <ImageView
+            android:id="@+id/imgArtikliLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnArtikli"
+            app:layout_constraintStart_toStartOf="@+id/btnArtikli"
+            app:srcCompat="@android:drawable/ic_lock_lock"
+            android:visibility="@{homeViewModel.adminStatus ? View.GONE : View.VISIBLE}"/>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/rect_button"
+            app:layout_constraintBottom_toTopOf="@+id/btnStart"
+            app:layout_constraintEnd_toStartOf="@+id/btnTurnOffDevice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.29000002">
+
+            <TextClock
+                android:id="@+id/textClock"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:format12Hour="hh:mm:ss"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/datum"
+                android:textSize="20sp"
+                android:background="@drawable/rect_button"
+                android:textColor="@android:color/holo_blue_bright"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

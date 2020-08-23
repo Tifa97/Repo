@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">CarpeDiem</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username:</string>
+    <string name="unesite_korisni_ko_ime">Unesite korisničko ime</string>
+    <string name="korisni_ko_ime">Korisničko ime:</string>
+    <string name="lozinka">Lozinka:</string>
+    <string name="unesite_lozinku">Unesite lozinku</string>
+    <string name="prijava">Prijava</string>
+    <string name="novi_korisnik">Novi korisnik</string>
+    <string name="tip_korisnika">Tip korisnika:</string>
+    <string name="admin">Admin:</string>
+    <string name="stvori_korisnika">Stvori korisnika</string>
+    <string name="ugasi_ure_aj">Ugasi uređaj</string>
+    <string name="start">Start</string>
+    <string name="storno">Storno</string>
+    <string name="postavke">Postavke</string>
+    <string name="ispis">Ispis</string>
+    <string name="datum">datum</string>
+    <string name="ugasi_aplikaciju">Ugasi aplikaciju</string>
+    <string name="izlaz">Izlaz</string>
+    <string name="izbri_i_sve">Izbriši sve</string>
+    <string name="sokovi">Sokovi</string>
+    <string name="voda">Voda</string>
+    <string name="piva">Piva</string>
+    <string name="whiskey">Whiskey</string>
+    <string name="jegger">Jegger</string>
+    <string name="gin">Gin</string>
+    <string name="vodka">Vodka</string>
+    <string name="tekila">Tekila</string>
+    <string name="ostalo">Ostalo</string>
+    <string name="ra_un">Račun</string>
+    <string name="total">Total:</string>
+    <string name="povratak">Povratak</string>
+    <string name="ispis_prometa_za_datum">Ispis prometa za datum:</string>
+    <string name="da">Da</string>
+    <string name="ne">Ne</string>
+    <string name="omogu_i_storno">Omogući storno</string>
+    <string name="dozvoli_popust">Dozvoli popust</string>
+    <string name="promjena_valute_u_eur">Promjena valute u EUR</string>
+    <string name="_1_eur">1 EUR =</string>
+    <string name="hrk">HRK</string>
+    <string name="rb">Rb</string>
+    <string name="ra_un_broj">Račun broj</string>
+    <string name="vrijeme">Vrijeme</string>
+    <string name="iznos">Iznos</string>
+    <string name="ra_uni">Računi</string>
+    <string name="category">category</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="_15_kn">15 kn</string>
+    <string name="coca_cola">Coca cola</string>
+    <string name="pi_e">Piće</string>
+    <string name="potvrdi">Potvrdi</string>
+    <string name="poni_ti_ra_un">Poništi</string>
+    <string name="dnevni_promet">Dnevni promet</string>
+    <string name="ispi_i">Ispiši</string>
+    <string name="_1">1.</string>
+    <string name="random">random</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="_0_00_kn">0.00 kn</string>
+    <string name="odjavi_se">Odjavi se</string>
+    <string name="artikli">Artikli</string>
+    <string name="popust">Popust</string>
+    <string name="euro">Euro</string>
+    <string name="dodaj">Dodaj</string>
+    <string name="uredi">Uredi</string>
+    <string name="izbri_i">Izbriši</string>
+    <string name="drink">Drink</string>
+    <string name="kategorija">Kategorija:</string>
+    <string name="cijena">Cijena:</string>
+    <string name="kn">kn</string>
+    <string name="naziv">Naziv:</string>
+    <string name="unesite_naziv_artikla">Unesite naziv artikla</string>
+    <string name="print">Print</string>
+    <string name="artikl">Artikl</string>
+    <string name="kom">kom</string>
+    <string name="cijenaa">Cijena</string>
+
+
+    <string-array name="Categories">
+        <item>Odaberite kategoriju</item>
+        <item>sokovi</item>
+        <item>voda</item>
+        <item>piva</item>
+        <item>whiskey</item>
+        <item>jegger</item>
+        <item>gin</item>
+        <item>vodka</item>
+        <item>tekila</item>
+        <item>ostalo</item>
+    </string-array>
+</resources>
